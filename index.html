@@ -162,12 +162,6 @@
             color: #042C53 !important;
         }
 
-        @media (max-width: 576px) {
-            .pdf-button {
-                display: none !important;
-            }
-        }
-        
         @media (max-width: 768px) {
             .hero-name {
                 font-size: 20px !important;
@@ -177,6 +171,22 @@
                 border-radius: 20px 20px 0 0;
             }
         }
+
+        @media (max-width: 576px) {
+            .pdf-button {
+                display: none !important;
+            }
+
+            .hero-name {
+                font-size: 16px !important;
+            }
+
+            .contract-number{
+                display: none !important;
+            }
+        }
+
+
 
         @media (max-height: 500px) {
             .wrapper {
@@ -229,7 +239,7 @@
                 <div class="col-auto expiry-pill d-flex align-items-center gap-2">
                     <i class="fas fa-clock" style="font-size:12px;"></i>
                     <span>
-                       تنتهي صلاحيته
+                        تنتهي صلاحيته
                         <p class="m-0">Expiration date</p>
                     </span>
                     <span>14/05/2026 11:17</span>
@@ -242,7 +252,7 @@
                 <div>
                     <p class="mb-1"
                         style="font-size:25px; color:rgba(255,255,255,1); letter-spacing:0.08em;line-height:2;">
-                        مرحباً 
+                        مرحباً
                     </p>
                     <h1 class="hero-name  mb-1" style="font-size:26px; font-weight:500; line-height:1.3;">
                         مصعب أحمد سفيان عبدالغفور
@@ -266,8 +276,7 @@
                                 <p class="mb-1" style="font-size:13px; color:#000000;">
                                     Car lease contract
                                 </p>
-                                <p style="font-size:15px; font-weight:500; color:#000000;">رقم العقد : <span
-                                        dir="rtl">26-1401-4003104-000002</span></p>
+                                <p class="contract-number" style="font-size:15px; font-weight:500; color:#000000;">رقم العقد : <span dir="rtl">26-1401-4003104-000002</span></p>
 
                             </div>
                         </div>
@@ -286,7 +295,7 @@
                         <div class="d-flex align-items-center gap-3">
                             <div class="text-end">
                                 <p class="mb-0" style="font-size:15px; font-weight:500; color:#1a1a1a;">الفاتورة
-                                    الضريبية
+                                    الضريبية المبسطة 
                                 </p>
                                 <p class="mb-1" style="font-size:13px; color:#000000;">
                                     VAT
