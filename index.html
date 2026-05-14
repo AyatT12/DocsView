@@ -18,6 +18,7 @@
             font-family: 'Cairo';
             text-align: right;
             overflow: hidden;
+            background-color: #fef8e8;
         }
 
         .wrapper {
@@ -28,7 +29,7 @@
         }
 
         .headers {
-            background-color: #042C53;
+            background-color: #ffce94;
         }
 
         .top-bar {
@@ -47,12 +48,12 @@
             border-radius: 20px;
             padding: 5px 14px;
             font-size: 12px;
-            color: rgba(255, 255, 255, 0.65);
+            color: black;
             white-space: nowrap;
         }
 
         .expiry-pill span {
-            color: #fff;
+            color: black;
             font-weight: 500;
         }
 
@@ -67,7 +68,7 @@
         }
 
         .white-sheet {
-            background: #f5f6f8;
+            background: #fff;
             border-radius: 24px 24px 0 0;
             flex: 1;
             overflow: hidden;
@@ -109,20 +110,6 @@
             font-size: 20px;
         }
 
-        .ic-green {
-            background: #EAF3DE;
-            color: #27500A;
-        }
-
-        .ic-blue {
-            background: #E6F1FB;
-            color: #0C447C;
-        }
-
-        .ic-amber {
-            background: #FAEEDA;
-            color: #633806;
-        }
 
         .pdf-tag {
             font-size: 11px;
@@ -153,7 +140,7 @@
         #loadingOverlay {
             position: fixed;
             inset: 0;
-            background: rgba(4, 44, 83, 0.92);
+            background: rgba(255, 255, 255, 0.2);
             display: none;
             justify-content: center;
             align-items: center;
@@ -165,6 +152,7 @@
             border-radius: 16px;
             padding: 32px 40px;
             text-align: center;
+            border: 2px solid;
         }
 
         .loader-box .spinner-border {
@@ -180,7 +168,7 @@
             }
         }
 
-        @media (max-width: 576px) {
+        @media (max-width: 768px) {
             .hero-name {
                 font-size: 20px !important;
             }
@@ -188,16 +176,14 @@
             .white-sheet {
                 border-radius: 20px 20px 0 0;
             }
-            .files-number{
-                display: none;
-            }
         }
-         @media (max-height: 500px) {
-             .wrapper{
+
+        @media (max-height: 500px) {
+            .wrapper {
                 overflow: auto;
-             }
-            
-         }
+            }
+
+        }
     </style>
 </head>
 
@@ -210,8 +196,8 @@
                 <div class="spinner-border mb-3" role="status">
                     <span class="visually-hidden">جاري التحميل...</span>
                 </div>
-                <p class="mb-0" style="color:#444; font-size:14px; font-weight:500;">
-                    جاري إنشاء المستند، فضلاً انتظر...
+                <p class="mb-0" style="color:#000000; font-size:14px; font-weight:500;">
+                    فضلاً انتظر...
                 </p>
             </div>
         </div>
@@ -226,15 +212,24 @@
                             <img src="https://system.ghyum.sa/images/Company/4003/Support%20Images/ImageLogo_20260323093033.png"
                                 alt="شعار الشركة" />
                         </div>
-                        <span class="col-auto text-white fw-500" style="font-size:14px; font-weight:500;">
-                            اليمامة لتأجير السيارات
-                        </span>
+                        <div class="col-auto d-flex flex-column">
+                            <span class="col-auto  fw-600" style="font-size:18px;">
+                                اليمامة لتأجير السيارات
+                            </span>
+                            <span class="col-auto  fw-600" style="font-size:14px;">
+                                Al Yamamah Car Rental
+                            </span>
+                        </div>
                     </div>
                 </div>
 
                 <div class="col-auto expiry-pill d-flex align-items-center gap-2">
                     <i class="fas fa-clock" style="font-size:12px;"></i>
-                    صلاحية الرابط تنتهي في<span>14/05/2026 11:17</span>
+                    <span>
+                        صلاحية الرابط تنتهي في
+                        <p class="m-0">The link expires on</p>
+                    </span>
+                    <span>14/05/2026 11:17</span>
                 </div>
 
             </div>
@@ -243,22 +238,14 @@
             <div class="d-flex align-items-end justify-content-between flex-wrap gap-3 px-3 pt-1 pt-xl-3 pb-xl-3">
                 <div>
                     <p class="mb-1"
-                        style="font-size:25px; color:rgba(255,255,255,0.5); letter-spacing:0.08em;line-height:2;">
+                        style="font-size:25px; color:rgba(255,255,255,1); letter-spacing:0.08em;line-height:2;">
                         مرحباً بك
                     </p>
-                    <h1 class="hero-name text-white mb-1" style="font-size:26px; font-weight:500; line-height:1.3;">
+                    <h1 class="hero-name  mb-1" style="font-size:26px; font-weight:500; line-height:1.3;">
                         مصعب أحمد سفيان عبدالغفور
                     </h1>
-                    <p class="mb-0 files-number" style="font-size:15px; color:rgba(255,255,255,0.45);">
-                        المستندات المتاحة — ٣ ملفات
-
-                    </p>
-                </div>
-
-                <div class="contract-badge-box p-3">
-                    <p class="mb-1" style="font-size:15px; color:rgba(255,255,255,0.45);">رقم العقد</p>
-                    <p class="contract-no text-white mb-0" style="font-size:15px; font-weight:500;">
-                        26-1401-4003104-000002
+                    <p class="mb-0" style="font-size:15px;">
+                        Musab Ahmed Sufyan Abdul Ghafour
                     </p>
                 </div>
 
@@ -267,26 +254,20 @@
         </div>
 
         <div class="white-sheet mt-4 flex-fill d-flex flex-column gap-1 gap-md-3 m-4 p-4">
-
-            <p class="mb-1" style="font-size:15px; color:#888; letter-spacing:0.05em;">
-                يرجى اختيار المستند الذي تود عرضه أو تحميله:
-            </p>
-
             <div class="documents-list d-flex flex-column gap-3 pt-2">
                 <a onclick="" class="doc-row p-3">
                     <div class="d-flex align-items-center justify-content-between">
                         <div class="d-flex align-items-center gap-3">
-                            <div class="doc-icon ic-green">
-                                <i class="fas fa-receipt"></i>
-                            </div>
                             <div class="text-end">
-                                <p class="mb-1" style="font-size:15px; font-weight:500; color:#1a1a1a;">سند القبض</p>
-                                <p class="mb-0" style="font-size:12px; color:#888;">
-                                    إيصال الدفع · رقم 26-1301-4003104-000035
+                                <p class="mb-0" style="font-size:15px; font-weight:500; color:#000000;">عقد الإيجار</p>
+                                <p class="mb-1" style="font-size:13px; color:#000000;">
+                                    Car lease contract
                                 </p>
+                                <p style="font-size:15px; font-weight:500; color:#000000;">رقم العقد : <span
+                                        dir="rtl">26-1401-4003104-000002</span></p>
+
                             </div>
                         </div>
-
                         <div class="pdf-button d-flex align-items-center gap-2">
                             <div class="arrow-circle">
                                 <i class="fas fa-chevron-right"></i>
@@ -300,15 +281,12 @@
                 <a onclick="" class="doc-row p-3">
                     <div class="d-flex align-items-center justify-content-between">
                         <div class="d-flex align-items-center gap-3">
-                            <div class="doc-icon ic-blue">
-                                <i class="fas fa-file-invoice"></i>
-                            </div>
                             <div class="text-end">
-                                <p class="mb-1" style="font-size:15px; font-weight:500; color:#1a1a1a;">الفاتورة
+                                <p class="mb-0" style="font-size:15px; font-weight:500; color:#1a1a1a;">الفاتورة
                                     الضريبية
                                 </p>
-                                <p class="mb-0" style="font-size:12px; color:#888;">
-                                    فاتورة رسمية معتمدة · VAT
+                                <p class="mb-1" style="font-size:13px; color:#000000;">
+                                    VAT
                                 </p>
                             </div>
                         </div>
@@ -326,16 +304,13 @@
                 <a onclick="" class="doc-row p-3">
                     <div class="d-flex align-items-center justify-content-between">
                         <div class="d-flex align-items-center gap-3">
-                            <div class="doc-icon ic-amber">
-                                <i class="fas fa-file-contract"></i>
-                            </div>
                             <div class="text-end">
-                                <p class="mb-1" style="font-size:15px; font-weight:500; color:#1a1a1a;">عقد الإيجار</p>
-                                <p class="mb-0" style="font-size:12px; color:#888;">
-                                    العقد الكامل مع الشروط والأحكام
-                                </p>
+                                <p class="mb-0" style="font-size:15px; font-weight:500; color:#1a1a1a;">سند القبض</p>
+                                <p class="mb-1" style="font-size:13px; color:#000000;">
+                                    Receipt voucher </p>
                             </div>
                         </div>
+
                         <div class="pdf-button d-flex align-items-center gap-2">
                             <div class="arrow-circle">
                                 <i class="fas fa-chevron-right"></i>
@@ -345,6 +320,11 @@
 
                     </div>
                 </a>
+
+
+
+
+
             </div>
 
 
@@ -359,6 +339,16 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
     <script src="https://mozilla.github.io/pdf.js/build/pdf.js"></script>
     <script src="https://unpkg.com/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
+    <script>
+        document.querySelectorAll('.doc-row').forEach(function (row) {
+            row.addEventListener('click', function () {
+                var overlay = document.getElementById('loadingOverlay');
+                overlay.style.display = 'flex';
+
+                setTimeout(function () { overlay.style.display = 'none'; }, 3000);
+            });
+        });
+    </script>
 
 </body>
 
